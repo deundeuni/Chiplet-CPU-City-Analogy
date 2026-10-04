@@ -11,8 +11,9 @@ English | [한국어](./README.ko.md)
 - Repository: Chiplet-CPU-City-Analogy
 - Author/Architect: deundeuni
 - License: Creative Commons Attribution 4.0 International (CC BY 4.0)
-- Version: v1.1
+- Version: v1.2
 - Revision history:
+  - v1.2 - Added Item 20 (Co-Development of Jobs and Infrastructure, designer's inference)
   - v1.1 - Added Item 19 (Expansion from Chiplet to System) and organized reference mapping numbers
   - v1.0 - Initial release
 
@@ -109,6 +110,9 @@ This document mainly focuses on the inside of the chiplet package (new-district 
 - Monitor/Printer: Display board showing city status, and external print shop outputting deliverables.
 - External Ports (USB, etc.): Gateway ports for devices outside the city to enter and exit.
 - Server: A neighboring metropolis connected via network. (Conceptually linked to 6.6 RDMA and Item 7 CXL)
+
+### 20. Co-Development of Jobs and Infrastructure (Designer's Inference)
+When jobs (factories, business facilities) appear in a new town, infrastructure such as roads, residential districts, city hall, water and sewage, transit, and convenience facilities is developed alongside them, and it is the designer's observation that their scale tends to be set not by everyday usage but by peak demand, such as commuting hours or periods of concentrated logistics. From this, the designer infers that in chiplets as well, when compute workloads (jobs) arise, infrastructure such as interconnect, power delivery, cooling, and cache for handling that traffic will be configured around peak load. (This is the designer's personal inference, not a verified fact. Actual design criteria vary by product, cost, and objectives, and are not necessarily based on maximum values.)
 
 ---
 
