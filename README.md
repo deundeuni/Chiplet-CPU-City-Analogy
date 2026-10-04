@@ -11,8 +11,10 @@ English | [한국어](./README.ko.md)
 - Repository: Chiplet-CPU-City-Analogy
 - Author/Architect: deundeuni
 - License: Creative Commons Attribution 4.0 International (CC BY 4.0)
-- Version: v1.0
-- Revision history: v1.0 - Initial release
+- Version: v1.1
+- Revision history:
+  - v1.1 - Added Item 19 (Expansion from Chiplet to System) and organized reference mapping numbers
+  - v1.0 - Initial release
 
 ---
 
@@ -95,6 +97,19 @@ A mechanism that assigns each core zone to prioritize access to its nearest memo
 ### 18. Station-Area Development and Hub-Centric Placement
 New towns or redevelopment areas generally develop around train stations or on vacant lots near them, with municipal infrastructure like roads, power, and water connecting to and expanding from those hubs. Similarly, in chiplet architectures, there are configurations that position and connect compute chiplets and memories around interconnect hubs such as I/O dies or fabric switches, analogous to station-area development. (This is an analogy, and actual placement varies by design.)
 
+### 19. Expansion from Chiplet to System (Connecting Old and New Districts)
+This document mainly focuses on the inside of the chiplet package (new-district complex), and this item is a conceptual expansion to the entire system outside the package. As it is not directly within the main scope, only a rough correspondence is presented. Just as a new city must be connected to the existing city center via roads, railways, and communications, a modern chiplet package (new district) is also compatible with and connected to devices of legacy standards (old district). (This is an analogy, and actual configurations vary by system.)
+- Motherboard: The foundational ground and arterial road network of the entire city connecting complexes and districts. (Item 7 Interposer corresponds to the internal ground within a complex)
+- CPU: The main municipal hall complex of the new city center (Item 4).
+- GPU: A separately established large specialized industrial park. It has its own logistics warehouse (VRAM, etc.) and connects to the main municipal hall via a high-speed arterial road (PCIe).
+- RAM: Large logistics warehouses located on the outskirts (Item 2).
+- SSD: Regional storage center.
+- Network: Regional road and postal network connecting to neighboring cities.
+- Bluetooth: Short-range alley communication network.
+- Monitor/Printer: Display board showing city status, and external print shop outputting deliverables.
+- External Ports (USB, etc.): Gateway ports for devices outside the city to enter and exit.
+- Server: A neighboring metropolis connected via network. (Conceptually linked to 6.6 RDMA and Item 7 CXL)
+
 ---
 
 ## Related Technologies and Reference Materials
@@ -102,8 +117,8 @@ New towns or redevelopment areas generally develop around train stations or on v
 > This section lists public standards and references related to the conceptual analogies for informational purposes, and does not constitute prior art or patent validity determination material. Versions reflect the time of writing and may be revised hereafter.
 
 **Standards and Specifications**
-- PCI Express Base Specification (PCI-SIG) — Base standard for CXL and UCIe (Items 6, 7)
-- Compute Express Link (CXL) Specification (CXL Consortium) — Memory pooling and sharing (Items 7, 8)
+- PCI Express Base Specification (PCI-SIG) — Base standard for CXL and UCIe (Items 6, 7, 19)
+- Compute Express Link (CXL) Specification (CXL Consortium) — Memory pooling and sharing (Items 7, 8, 19)
 - UCIe Specification (UCIe Consortium) — PCIe/CXL-based die-to-die interconnect (Items 6, 7)
 - Bunch of Wires (BoW) (OCP ODSA) — Open die-to-die interface preceding UCIe (Item 6)
 - AMBA CHI Chip-to-Chip (Arm) — Chip-to-chip coherent interconnect protocol (Item 6)
